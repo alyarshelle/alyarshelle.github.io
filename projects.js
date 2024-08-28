@@ -33,7 +33,7 @@ const projects = [
         languages: "Programming Languages: HTML, CSS, Javascript, React, Node.js, Express.js",                     
         image: "/images/RecipeSite.png", // Replace with your image path
         link: "https://github.com/alyarshelle/RecipeSite",
-        visitLink: "https://example.com" // Use a relative path for the video
+        videoLink: "/videos/RecipeSite.mp4" // Use a relative path for the video
     },
     {
         title: "Wordly",
