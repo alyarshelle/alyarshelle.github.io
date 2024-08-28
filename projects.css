@@ -114,10 +114,20 @@ body {
     margin-right: 10px; 
 }
 
+.github-button:hover {
+    background-color: var(--github-link);
+    color: var(--text-color-light); 
+}
+
 .video-button {
     margin-left: 10px;
     border-color: var(--video-link); 
     color: var(--video-link); 
+}
+
+.video-button:hover {
+    background-color: var(--video-link);
+    color: var(--text-color-light); 
 }
 
 .play-button {
@@ -126,10 +136,20 @@ body {
     color: var(--play-link); 
 }
 
+.play-button:hover {
+    background-color: var(--play-link);
+    color: var(--text-color-light); 
+}
+
 .visit-button {
     margin-left: 10px;
     border-color: var(--visit-link);
     color: var(--visit-link);
+}
+
+.visit-button:hover {
+    background-color: var(--visit-link);
+    color: var(--text-color-light); 
 }
 
 /* Modal styling */
