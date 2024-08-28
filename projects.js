@@ -61,7 +61,7 @@ const projects = [
                      "set reminders, and more!",
         languages: "Programming Languages: HTML, CSS, Javascript",                     
         image: "/images/ToDo.png", // Replace with your image path
-        link: "https://github.com/alyarshelle",
+        link: "https://github.com/alyarshelle/Alya-Portfolio/tree/main/ToDoApp",
         visitLink: "toDoApp.html" // Use a relative path for the video
     },
     {
@@ -69,7 +69,7 @@ const projects = [
         description: "A classic rendition of the Snake Game.",
         languages: "Programming Languages: Python, Pygame",                     
         image: "/images/SnakeGame.png", // Replace with your image path
-        link: "https://github.com/alyarshelle",
+        link: "https://github.com/alyarshelle/Alya-Portfolio/blob/main/snakeGame%2Cpy",
         videoLink: "/videos/snakeGame_Demo.mp4" // Use a relative path for the video
     },
     {
@@ -78,7 +78,7 @@ const projects = [
                      "can check out the full scene here!",
         languages: "Programming Languages: HTML, CSS",                     
         image: "/images/Pengu.png", // Replace with your image path
-        link: "https://github.com/alyarshelle",
+        link: "https://github.com/alyarshelle/Alya-Portfolio/tree/main/Pengu",
         visitLink: "penguin.html" // Use a relative path for the video
     },
 ];
