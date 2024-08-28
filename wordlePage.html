@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <link rel="stylesheet" href="./wordlePage.css" />
+            <title>Wordly</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          </head>
+
+          <body> 
+            <div class="settings">
+                <p>Toggle Light/Dark Mode</p>
+                <div class="dark-mode-switch">
+                    <input type="checkbox" id="dark-mode-toggle" />
+                    <label for="dark-mode-toggle">
+                        <span id="toggle"></span>
+                    </label>
+                </div>
+           
+                <label>
+                    <p id="hard-mode">Hard Mode <input type="checkbox" id="hard-mode-toggle"></p>                   
+                </label>
+            </div>
+
+
+            <h1>WORDLY</h1>
+            <h3>Welcome to Wordly! A NYT Wordle Clone.</h3>
+            <div class="game-container">
+                <div class="wordle-grid">
+                    <div class="wordle-row">
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                    </div>
+                    <div class="wordle-row">
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                    </div>
+                    <div class="wordle-row">
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                    </div>
+                    <div class="wordle-row">
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                    </div>
+                    <div class="wordle-row">
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                    </div>
+                    <div class="wordle-row">
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                        <div class="wordle-box"></div>
+                    </div>
+                </div>
+                
+                <div class="wordle-keyboard">
+                    <div class="keyboard-row">
+                        <button class="key">Q</button>
+                        <button class="key">W</button>
+                        <button class="key">E</button>
+                        <button class="key">R</button>
+                        <button class="key">T</button>
+                        <button class="key">Y</button>
+                        <button class="key">U</button>
+                        <button class="key">I</button>
+                        <button class="key">O</button>
+                        <button class="key">P</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="key">A</button>
+                        <button class="key">S</button>
+                        <button class="key">D</button>
+                        <button class="key">F</button>
+                        <button class="key">G</button>
+                        <button class="key">H</button>
+                        <button class="key">J</button>
+                        <button class="key">K</button>
+                        <button class="key">L</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="key">ENTER</button>
+                        <button class="key">Z</button>
+                        <button class="key">X</button>
+                        <button class="key">C</button>
+                        <button class="key">V</button>
+                        <button class="key">B</button>
+                        <button class="key">N</button>
+                        <button class="key">M</button>
+                        <button class="key" id="backspace">⌫</button>
+                
+                    </div>
+                </div>
+
+                <div id="results-popup" class="popup">
+                    <div class="popup-contents">
+                        <span id="close-results"></span>
+                        <h2 id="results-msg">Game Over!</h2>
+                        <button id="play-again-button">Play Again</button>
+                    </div>
+                </div>
+
+                <div id="error-popup" class="popup" style="display: none;">
+                    <div class="popup-contents error-contents">
+                        <span id="error-msg"></span>
+                        <button id="close-error">Close</button>
+                    </div>
+                </div>
+
+                        
+                </div>
+            </div>
+
+            <div id="rules-popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-button">&times;</span>
+                    <h2>How to Play Wordle</h2>
+                    <p>Guess the Wordle in 6 tries.</p>
+                    <p>Each guess must be a valid 5-letter word. Hit the enter button to submit.</p>
+                    <p>After each guess, the color of the tiles will change to show how close your guess was to the word.</p>
+                    <ul>
+                        <li><strong id="g">Green</strong> - The letter is in the word and in the correct spot.</li>
+                        <li><strong id="y">Yellow</strong> - The letter is in the word but in the wrong spot.</li>
+                        <li><strong id="gr">Gray</strong> - The letter is not in the word in any spot.</li>
+                    </ul>
+                    <h2>Hard Mode Rules</h2>
+                    <p>Rules of Wordle still apply however any information revealed in previous guesses must be used.</p>
+                    <p>So, if you get a green in space 4, your next guess must contain that letter in space 4.</p>
+                    <p>If you get a yellow, your next guess must contain that letter in any space.</p>
+                    <p>For example: 1st guess = PAINS, 2nd guess could be DRONE.</p>
+                    <p>For example: 1st guess = SPACE, 2nd guess could be CARTS.</p>
+                    <p>NOTE: If you uncheck hardmode at any point in the game, you can not recheck until the next round.</p>
+                </div>
+            </div>
+
+            <button id="rules-button">Rules</button>
+            <button id="restart-button">Restart</button>
+        
+            <script src="wordleScript.js"></script>
+
+          </body>
+    </html>

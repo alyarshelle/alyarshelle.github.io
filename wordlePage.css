@@ -1,0 +1,324 @@
+.disabled {
+    pointer-events: none;
+    opacity: 0.5; /* Optional: visually indicate that the element is disabled */
+}
+
+.settings {
+    display: flex;
+    align-items: center; /* Vertically centers items within the container */
+    gap: 10px; /* Adds space between items */
+}
+
+#hard-mode{
+    position:absolute;
+    top: 6px;
+    left: 240px;
+}
+
+#toggle{
+    position:absolute;
+    top: -11px;
+    left: -20px;
+}
+
+h1{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+}
+
+h3{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+.wordle-grid{
+    display: grid;
+    gap: 10px;
+}
+
+.wordle-row{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.wordle-box{
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+.wordle-keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.key {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#rules-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#restart-button{
+    position: absolute;
+    top: 20px;
+    right: 120px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 700px;
+    text-align: left;
+}
+
+.popup-content h2{
+    text-align: center;
+}
+
+#g{
+    color:green;
+}
+
+#y{
+    color:rgb(242, 242, 5);
+}
+
+#gr{
+    color:gray;
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.error-contents {
+    border: 2px solid #333; /* Red border for error */
+}
+
+#error-msg {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333; /* Red color for error message */
+}
+
+/* Color-changing styles */
+.wordle-box.correct {
+    background: green;
+    color: white; /* Optional: ensures text is visible on green background */
+}
+
+.wordle-box.present {
+    background: yellow;
+    color: black; /* Optional: ensures text is visible on yellow background */
+}
+
+.wordle-box.absent {
+    background: gray;
+    color: white; /* Optional: ensures text is visible on gray background */
+}
+
+#results-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-contents {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+}
+
+.popup-contents h2 {
+    margin-bottom: 20px;
+}
+
+#play-again-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode h1 {
+    color: #f0f0f0;
+}
+
+body.dark-mode h3 {
+    color: #d0d0d0;
+}
+
+body.dark-mode .wordle-box {
+    background: #333;
+    border: 1px solid #555;
+    color: #f0f0f0;
+}
+
+body.dark-mode .key {
+    background-color: #555;
+    border: 1px solid #444;
+    color: #f0f0f0;
+}
+
+body.dark-mode .popup,
+body.dark-mode #results-popup {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode #results-msg{
+    color:#333;
+}
+
+body.dark-mode .popup-content,
+body.dark-mode .results-popup-content {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .popup-content h2,
+body.dark-mode .results-popup-content h2 {
+    color: #f0f0f0;
+}
+
+body.dark-mode #rules-button,
+body.dark-mode #restart-button {
+    color: #f0f0f0;
+    background-color: #444;
+    border: 1px solid #555;
+}
+
+body.dark-mode #rules-button:hover,
+body.dark-mode #restart-button:hover {
+    background-color: #555;
+    border-color: #666;
+}
+
+body.dark-mode .close-button {
+    color: #f0f0f0;
+}
+
+body.dark-mode .wordle-box.correct {
+    background: green;
+    color: white; /* Optional: ensures text is visible on green background */
+}
+
+body.dark-mode .wordle-box.present {
+    background: yellow;
+    color: black; /* Optional: ensures text is visible on yellow background */
+}
+
+body.dark-mode .wordle-box.absent {
+    background: gray;
+    color: white; /* Optional: ensures text is visible on gray background */
+}
+
+/* Basic switch styles */
+.dark-mode-switch {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.dark-mode-switch input {
+    display: none;
+}
+
+.dark-mode-switch label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.dark-mode-switch label span {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    transition: background 0.3s;
+}
+
+.dark-mode-switch label span::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s;
+}
+
+.dark-mode-switch input:checked + label span {
+    background: #333;
+}
+
+.dark-mode-switch input:checked + label span::before {
+    transform: translateX(20px);
+}
+

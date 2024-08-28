@@ -1,0 +1,170 @@
+h1 {
+    text-align: center;
+    color: var(--text-color-light);
+    font-size: 60px;
+}
+
+body {
+    font-family: var(--font);
+    line-height: 1.6;
+    background-color: var(--background-one); /* Base color for the background */
+    background: linear-gradient(135deg, rgba(96, 75, 251, 0.1) 25%, transparent 15%) -30px 0/ 60px 60px,
+                linear-gradient(225deg, rgba(96, 75, 251, 0.3) 25%, transparent 25%) -30px 0/ 60px 60px,
+                linear-gradient(315deg, rgba(96, 75, 251, 0.1) 25%, transparent 25%) 0px 0/ 60px 60px,
+                linear-gradient(45deg, rgba(96, 75, 251, 0.3) 25%, var(--background-one) 25%) 0px 0/ 60px 60px;
+}
+
+/* Project Section */
+.projects-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#info {
+    font-size: 22px;
+    width: 100%; 
+    max-width: 1750px; 
+    text-align: center;
+    margin: 0 auto 20px; 
+    padding: 0 20px; 
+    font-weight: bold;
+    color: var(--text-color-light);
+}
+
+/* Container for the grid to add border effect */
+.grid-container {
+    padding: 0 40px; 
+    box-sizing: border-box; 
+}
+
+/* Grid for the cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactly three columns */
+    gap: 40px;
+    justify-content: center; 
+    padding: 20px;
+}
+
+/* Individual card styling */
+.card {
+    background-color: var(--text-color-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 450px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.card-image{
+    width: 450px;
+    height: 250px;
+    border: 3px dashed var(--background-two);
+}
+
+/* Card content styling */
+.card-content {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.card-content p,.card-content b {
+    text-align: left; 
+    margin: 10px 0;
+    font-size: 14px;
+    color: var(--text-color-dark);
+}
+
+/* Button container styling */
+.button-container {
+    margin-top: auto;
+    padding: 10px; 
+}
+
+/* Common Button Styles */
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid var(--github-link);
+    color: var(--github-link); 
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#progress{
+    color: red;
+    font-size:20px;
+    text-align: center;
+}
+
+
+/* Specific Styles for GitHub and Video Buttons */
+.github-button {
+    margin-right: 10px; 
+}
+
+.video-button {
+    margin-left: 10px;
+    border-color: var(--video-link); 
+    color: var(--video-link); 
+}
+
+.play-button {
+    margin-left: 10px;
+    border-color: var(--play-link); 
+    color: var(--play-link); 
+}
+
+.visit-button {
+    margin-left: 10px;
+    border-color: var(--visit-link);
+    color: var(--visit-link);
+}
+
+/* Modal styling */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Modal close button */
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--text-color-light);
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Modal video element */
+.modal video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    display: block;
+}
