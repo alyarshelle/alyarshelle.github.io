@@ -42,7 +42,7 @@ const projects = [
                      "and enjoy the challenge of guessing a 5-letter word within 6 attempts.",
         languages: "Programming Languages: HTML, CSS, Javascript",                     
         image: "/images/Wordly.png", // Replace with your image path
-        link: "https://github.com/alyarshelle",
+        link: "https://github.com/alyarshelle/Alya-Portfolio/tree/main/Wordle-Clone",
         playLink: "wordlePage.html" // Use a relative path for the video
     },
     {
